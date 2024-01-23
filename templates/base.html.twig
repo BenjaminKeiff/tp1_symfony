@@ -12,6 +12,30 @@
         {% endblock %}
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                    <li><a href="{{ path('app_clients_index') }}">Client</a></li>
+                    <li><a href="{{ path('app_organizations_index') }}">Entreprises</a></li>
+                    <li><a href="{{ path('app_positions_index') }}">Postes</a></li>
+                </ul>
+                <ul>
+                {% if app.user %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_logout') }}">Me deconnecter</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_register') }}">M'inscrire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('app_login') }}">Me Connecter</a>
+                            </li>
+                        {% endif %}
+                </ul>
+            </nav>
+        </header>
         {% block body %}{% endblock %}
     </body>
 </html>
