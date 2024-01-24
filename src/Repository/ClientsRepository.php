@@ -21,6 +21,18 @@ class ClientsRepository extends ServiceEntityRepository
         parent::__construct($registry, Clients::class);
     }
 
+    
+    public function findAllWithPositionAndOrganization()
+    {
+        return $this->createQueryBuilder('c')
+            ->select('c', 'p', 'o') 
+            ->join('c.position', 'p')
+            ->join('c.organization', 'o')
+            ->getQuery()
+            ->getResult();
+    }
+    
+
 //    /**
 //     * @return Clients[] Returns an array of Clients objects
 //     */

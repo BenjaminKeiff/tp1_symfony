@@ -1,3 +1,35 @@
 body {
     background-color: skyblue;
+    margin: 0;
+    padding: 0;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.500);
+}
+
+

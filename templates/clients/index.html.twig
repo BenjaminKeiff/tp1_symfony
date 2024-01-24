@@ -8,18 +8,17 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Mail</th>
                 <th>Entreprise</th>
                 <th>Poste</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for client in clients %}
             <tr>
-                <td>{{ client.id }}</td>
                 <td>{{ client.firstname }}</td>
                 <td>{{ client.lastname }}</td>
                 <td>{{ client.mail }}</td>

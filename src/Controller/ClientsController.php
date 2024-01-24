@@ -21,7 +21,7 @@ class ClientsController extends AbstractController
     public function index(ClientsRepository $clientsRepository): Response
     {
         return $this->render('clients/index.html.twig', [
-            'clients' => $clientsRepository->findAll(),
+            'clients' => $clientsRepository->findAllWithPositionAndOrganization(),
         ]);
     }
 
